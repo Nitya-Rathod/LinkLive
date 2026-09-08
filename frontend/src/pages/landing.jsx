@@ -1,5 +1,4 @@
-import React from "react";
-import "../App.css";
+import "../styles/Landing.css";
 import { Link, useNavigate } from "react-router-dom";
 export default function LandingPage() {
   const router = useNavigate();
@@ -8,7 +7,9 @@ export default function LandingPage() {
     <div className="landingPageContainer">
       <nav>
         <div className="navHeader">
-          <h2>LinkLive</h2>
+          <h2>
+            Link<span style={{ color: "#FF9839" }}>Live</span>
+          </h2>
         </div>
         <div className="navlist">
           <p
@@ -44,7 +45,11 @@ export default function LandingPage() {
           </h1>
 
           <p>
-            Cover a distance by <b>LinkLive's</b> Video Call
+            Cover a distance by{" "}
+            <b>
+              Link<span style={{ color: "#FF9839" }}>Live's</span>
+            </b>{" "}
+            Video Call
           </p>
           <div role="button">
             <Link to={"/auth"}>Get Started</Link>

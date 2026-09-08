@@ -1,0 +1,203 @@
+.homeContainer {
+  min-height: 100vh;
+  background-color: #0a0e27;
+}
+
+/* Navbar */
+
+.homeNavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+}
+
+.homeLogo {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+
+.homeLogo span {
+  color: #d97500;
+}
+
+.homeNavRight {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.homeHistoryIcon {
+  color: #a0a0b0 !important;
+}
+
+.homeHistoryIcon svg {
+  font-size: 1.6rem !important;
+}
+
+.homeHistoryText {
+  color: #a0a0b0;
+  font-size: 1.1rem;
+  margin: 0;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.homeHistoryText:hover {
+  color: white;
+}
+
+.homeLogoutButton {
+  color: #d97500 !important;
+  font-size: 1rem !important;
+  padding: 8px 16px !important;
+}
+
+/* Main content */
+
+.homeMeetContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  gap: 40px;
+  min-height: 70vh;
+}
+
+.homeLeftPanel {
+  max-width: 480px;
+}
+
+.homeHeading {
+  color: white;
+  font-size: 1.95rem;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.homeHeading span {
+  color: #d97500;
+}
+
+.homeSubtext {
+  color: #a0a0b0;
+  font-size: 0.9rem;
+  margin: 0 0 24px;
+}
+
+.homeJoinRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.homeJoinButton {
+  background-color: #d97500 !important;
+  height: 56px;
+  padding-inline: 20px !important;
+  font-size: 15px !important;
+}
+
+.homeJoinButton:hover {
+  background-color: #c26a00 !important;
+}
+
+/* Text field dark theme + autofill fix */
+
+.homeTextField .MuiOutlinedInput-root {
+  color: white;
+}
+
+.homeTextField .MuiOutlinedInput-root fieldset {
+  border-color: #333;
+}
+
+.homeTextField .MuiOutlinedInput-root:hover fieldset {
+  border-color: #555;
+}
+
+.homeTextField .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #d97500;
+}
+
+.homeTextField .MuiInputLabel-root {
+  color: #a0a0b0;
+}
+
+.homeTextField .MuiInputLabel-root.Mui-focused {
+  color: #d97500;
+}
+
+.homeTextField input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #14183a inset;
+  -webkit-text-fill-color: white;
+  caret-color: white;
+}
+
+/* Right panel illustration */
+
+.homeRightPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex: 1;
+}
+
+.homePhoneIllustration {
+  width: 260px;
+  height: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .homeMeetContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+    gap: 32px;
+  }
+
+  .homeLeftPanel {
+    max-width: 100%;
+  }
+
+  .homeJoinRow {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .homeHeading {
+    font-size: 1.6rem;
+  }
+
+  .homeRightPanel {
+    order: -1;
+  }
+
+  .homePhoneIllustration {
+    width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeNavBar {
+    padding: 16px 20px;
+  }
+
+  .homeJoinRow {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .homeJoinButton {
+    width: 100%;
+  }
+
+  .homeTextField {
+    width: 100%;
+  }
+}

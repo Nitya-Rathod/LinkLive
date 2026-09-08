@@ -50,6 +50,9 @@ const signup = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // Generate token immediately during signup
+    const token = crypto.randomBytes(20).toString("hex");
+
     const newUser = new User({
       name: name,
       username: username,
@@ -58,9 +61,13 @@ const signup = async (req, res) => {
 
     await newUser.save();
 
-    res.status(httpStatus.CREATED).json({ message: "Signup successful" });
+    res
+      .status(httpStatus.CREATED)
+      .json({ message: "Signup successful", token: token });
   } catch (e) {
-    res.json({ message: `Something went wrong ${e}` });
+    return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
+      message: `Something went wrong ${e}`,
+    });
   }
 };
 
@@ -95,4 +102,32 @@ const addToHistory = async (req, res) => {
   }
 };
 
-export { login, signup, getUserHistory, addToHistory };
+const deleteFromHistory = async (req, res) => {
+  const { token, meeting_id } = req.body;
+
+  try {
+    const user = await User.findOne({ token: token });
+
+    const meeting = await Meeting.findOne({ _id: meeting_id });
+
+    if (!meeting) {
+      return res
+        .status(httpStatus.NOT_FOUND)
+        .json({ message: "Meeting not found" });
+    }
+
+    if (meeting.user_id !== user.username) {
+      return res
+        .status(httpStatus.FORBIDDEN)
+        .json({ message: "Not authorized to delete this meeting" });
+    }
+
+    await Meeting.deleteOne({ _id: meeting_id });
+
+    res.status(httpStatus.OK).json({ message: "Deleted from history" });
+  } catch (e) {
+    res.json({ message: `Something went wrong ${e}` });
+  }
+};
+
+export { login, signup, getUserHistory, addToHistory, deleteFromHistory };

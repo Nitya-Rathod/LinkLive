@@ -1,0 +1,174 @@
+.authContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #0d0d0f;
+}
+
+/* Left panel */
+
+.authLeftPanel {
+  flex: 1.4;
+  background-color: #0a0e27;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.authLogo {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.authLogo span {
+  color: #d97500;
+}
+
+.authTagline {
+  font-size: 1rem;
+  color: #a0a0b0;
+  margin-top: 0.5rem;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Right form panel */
+
+.authRightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d0d0f;
+  padding: 2rem;
+}
+
+.authFormBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+}
+
+.authAvatar {
+  background-color: rgba(217, 117, 0, 0.15) !important;
+  margin-bottom: 0.5rem;
+}
+
+.authLockIcon {
+  color: #d97500 !important;
+}
+
+/* Sign in / Sign up toggle */
+
+.authToggleButtons {
+  display: flex;
+  gap: 8px;
+  margin-block: 1rem;
+}
+
+.authToggleActive {
+  background-color: #d97500 !important;
+  color: white !important;
+  border: 1px solid #d97500 !important;
+}
+
+.authToggleActive:hover {
+  background-color: #c26a00 !important;
+}
+
+.authToggleInactive {
+  background-color: transparent !important;
+  color: #a0a0b0 !important;
+  border: 1px solid #333 !important;
+}
+
+.authToggleInactive:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Form */
+
+.authForm {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.authError {
+  color: #e24b4a;
+  font-size: 0.85rem;
+  min-height: 1.2rem;
+}
+
+.authSubmitButton {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  background-color: #d97500 !important;
+}
+
+.authSubmitButton:hover {
+  background-color: #c26a00 !important;
+}
+
+/* Text fields — dark theme + autofill fix */
+
+.authTextField .MuiOutlinedInput-root {
+  color: white;
+}
+
+.authTextField .MuiOutlinedInput-root fieldset {
+  border-color: #333;
+}
+
+.authTextField .MuiOutlinedInput-root:hover fieldset {
+  border-color: #555;
+}
+
+.authTextField .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #d97500;
+}
+
+.authTextField .MuiInputLabel-root {
+  color: #a0a0b0;
+}
+
+.authTextField .MuiInputLabel-root.Mui-focused {
+  color: #d97500;
+}
+
+.authTextField input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1a1a1d inset;
+  -webkit-text-fill-color: white;
+  caret-color: white;
+  border-radius: inherit;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .authLeftPanel {
+    display: none;
+  }
+
+  .authRightPanel {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .authLogo {
+    font-size: 1.8rem;
+  }
+
+  .authFormBox {
+    max-width: 100%;
+  }
+}

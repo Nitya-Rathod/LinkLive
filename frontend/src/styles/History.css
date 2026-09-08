@@ -1,0 +1,177 @@
+.historyContainer {
+  min-height: 100vh;
+  background-color: #0a0e27;
+  padding: 28px 32px;
+}
+
+.historyHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.historyHomeIcon {
+  background-color: rgba(217, 117, 0, 0.15) !important;
+  color: #d97500 !important;
+}
+
+.historyTitle {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Timeline */
+
+.historyTimeline {
+  position: relative;
+  padding-left: 8px;
+  max-width: 680px;
+}
+
+.historyTimeline::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: #262b52;
+}
+
+.historyTimelineItem {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  position: relative;
+  align-items: center;
+}
+
+.historyTimelineContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.historyDeleteIcon {
+  color: #666 !important;
+  opacity: 0;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
+}
+
+.historyTimelineItem:hover .historyDeleteIcon {
+  opacity: 1;
+}
+
+.historyDeleteIcon:hover {
+  color: #e24b4a !important;
+}
+
+.historyTimelineIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #0a0e27;
+  border: 2px solid #d97500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.historyTimelineIcon svg {
+  font-size: 1rem;
+  color: #d97500;
+}
+
+.historyTimelineContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.historyCode {
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.historyDate {
+  color: #a0a0b0;
+  font-size: 0.99rem;
+  margin-top: 2px;
+}
+
+.historyEmpty {
+  color: #a0a0b0;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Confirm delete dialog */
+
+.confirmDialogPaper {
+  background-color: #14183a !important;
+  border: 0.5px solid #262b52;
+  border-radius: 12px !important;
+  min-width: 320px;
+}
+
+.confirmDialogTitle {
+  color: white !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.confirmDialogActions {
+  padding: 8px 24px 16px !important;
+}
+
+.confirmCancelButton {
+  color: #a0a0b0 !important;
+}
+
+.confirmCancelButton:hover {
+  color: white !important;
+}
+
+.confirmDeleteButton {
+  color: #e24b4a !important;
+}
+
+.confirmDeleteButton:hover {
+  background-color: rgba(226, 75, 74, 0.1) !important;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .historyContainer {
+    padding: 20px 16px;
+  }
+
+  .historyTimeline::before {
+    left: 21px;
+  }
+
+  .historyTimelineIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .historyCode {
+    font-size: 0.85rem;
+  }
+
+  .historyDate {
+    font-size: 0.75rem;
+  }
+}
