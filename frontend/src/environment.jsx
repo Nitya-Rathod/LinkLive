@@ -1,3 +1,3 @@
-const server = "http://192.168.1.3:8000";
+const server = "https://linklive-09vi.onrender.com";
 
 export default server;
