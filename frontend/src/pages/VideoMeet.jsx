@@ -1,4 +1,4 @@
-import styles from "../styles/videoMeet.module.css";
+import "../styles/VideoMeet.css";
 import "../styles/Lobby.css";
 
 import { useContext, useEffect, useRef, useState } from "react";
@@ -564,13 +564,13 @@ export default function VideoMeetComponent() {
           </div>
         </div>
       ) : (
-        <div className={styles.meetVideoContainer}>
+        <div className="meetVideoContainer">
           {showModal ? (
-            <div className={styles.chatRoom}>
-              <div className={styles.chatContainer}>
+            <div className="chatRoom">
+              <div className="chatContainer">
                 <h1>Chat</h1>
 
-                <div className={styles.chattingDisplay}>
+                <div className="chattingDisplay">
                   {messages.length !== 0 ? (
                     messages.map((item, index) => {
                       console.log(messages);
@@ -582,13 +582,11 @@ export default function VideoMeetComponent() {
                       );
                     })
                   ) : (
-                    <p className={styles.chattingDisplayEmpty}>
-                      No Messages Yet
-                    </p>
+                    <p className={chattingDisplayEmpty}>No Messages Yet</p>
                   )}
                 </div>
 
-                <div className={styles.chattingArea}>
+                <div className="chattingArea">
                   <TextField
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -606,7 +604,7 @@ export default function VideoMeetComponent() {
             <></>
           )}
 
-          <div className={styles.buttonContainers}>
+          <div className="buttonContainers">
             <IconButton onClick={handleVideo} style={{ color: "white" }}>
               {video === true ? <VideocamIcon /> : <VideocamOffIcon />}
             </IconButton>
@@ -640,13 +638,13 @@ export default function VideoMeetComponent() {
           </div>
 
           <video
-            className={styles.meetUserVideo}
+            className="meetUserVideo"
             ref={localVideoref}
             autoPlay
             muted
           ></video>
 
-          <div className={styles.conferenceView}>
+          <div className="conferenceView">
             {videos.map((video) => (
               <div key={video.socketId}>
                 <video
