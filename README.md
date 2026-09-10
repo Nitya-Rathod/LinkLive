@@ -8,23 +8,23 @@ A Zoom-inspired video conferencing web app built with the MERN stack, WebRTC, an
 
 ### Landing Page
 
-![Landing Page](./screenshots/landing.png)
+![Landing Page](./screenshots/LandingPage.png)
 
 ### Authentication
 
-![Auth Page](./screenshots/auth.png)
+![Auth Page](./screenshots/AuthPage.png)
 
 ### Home
 
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/HomePage.png)
 
 ### In-Call Screen
 
-![In-Call Screen](./screenshots/in-call.png)
+![In-Call Screen](./screenshots/CallScreen.png)
 
 ### Meeting History
 
-![History Page](./screenshots/history.png)
+![History Page](./screenshots/MeetingHistory.png)
 
 ## ✨ Features
 

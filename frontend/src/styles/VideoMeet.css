@@ -8,10 +8,13 @@
 .meetUserVideo {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 10px !important;
   height: 25vh;
   width: 25vw;
-  border-radius: 10px;
+  border-radius: 10px !important;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
   z-index: 2;
 }
 
@@ -45,19 +48,9 @@
   font-size: 1.4rem;
 }
 
-/* .conferenceView {
-  display: flex;
-  padding: 10px;
-  gap: 5px;
-  height: 80vh;
-  width: 75vw;
-  align-items: center;
-  justify-content: center;
-} */
-
 .conferenceView {
   display: flex;
-  padding: 10px;
+  padding: 5px;
   gap: 5px;
   height: 80vh;
   width: 100%;
@@ -74,16 +67,6 @@
 .chat-closed .conferenceView {
   width: 100%;
 }
-
-/* .conferenceView video {
-  width: 50vw !important;
-  height: 65vh !important;
-  min-width: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  background: #14183a;
-  border: 1px solid #262b52;
-} */
 
 .conferenceView video {
   width: 100% !important;
