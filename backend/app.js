@@ -16,7 +16,7 @@ const io = connectToSocket(server);
 app.set("port", process.env.PORT || 8000);
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://linklive-09vi.onrender.com"],
+    origin: ["http://localhost:5173", "https://link-live-cv7e-vert.vercel.app"],
     credentials: true,
   }),
 );

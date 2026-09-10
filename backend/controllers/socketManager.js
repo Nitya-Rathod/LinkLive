@@ -7,7 +7,10 @@ let timeOnline = {};
 export const connectToSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: ["http://localhost:5173", "https://linklive-09vi.onrender.com"],
+      origin: [
+        "http://localhost:5173",
+        "https://link-live-cv7e-vert.vercel.app",
+      ],
       methods: ["GET", "POST"],
       allowedHeaders: ["*"],
       credentials: true,
