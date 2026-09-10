@@ -2,9 +2,9 @@
 
 A Zoom-inspired video conferencing web app built with the MERN stack, WebRTC, and Socket.io — supporting real-time video/audio calls, in-call chat, and meeting history.
 
-## 📸 Screenshots
+🔗 **Live Demo:** [https://link-live-cv7e-vert.vercel.app](https://link-live-cv7e-vert.vercel.app)
 
-## Screenshots
+## 📸 Screenshots
 
 ### Landing Page
 
@@ -66,7 +66,7 @@ A Zoom-inspired video conferencing web app built with the MERN stack, WebRTC, an
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/linklive.git
+git clone https://github.com/Nitya-Rathod/LinkLive.git
 cd linklive
 ```
 
@@ -108,7 +108,7 @@ The app will be available at `http://localhost:5173`.
 4. Once connected, use the in-call controls to manage video, audio, screen sharing, and chat.
 5. Past meetings are saved to your history and can be viewed or deleted anytime.
 
-## 📂  Project Structure
+## 📂 Project Structure
 
 ```
 linklive/
@@ -127,8 +127,8 @@ linklive/
 
 ## Known Limitations
 
-- Not yet deployed to a live production environment
-- Screen sharing and video quality depend on network conditions, as with any WebRTC-based app
+- Backend is hosted on Render's free tier, which spins down after periods of inactivity — the first request after idle time may take 30–60 seconds
+- Video/audio quality depends on network conditions, as with any WebRTC-based peer-to-peer app
 
 📄 License
 
