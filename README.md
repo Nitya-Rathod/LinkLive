@@ -108,7 +108,7 @@ The app will be available at `http://localhost:5173`.
 4. Once connected, use the in-call controls to manage video, audio, screen sharing, and chat.
 5. Past meetings are saved to your history and can be viewed or deleted anytime.
 
-## Project Structure
+## 📂  Project Structure
 
 ```
 linklive/
