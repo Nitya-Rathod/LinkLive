@@ -45,6 +45,7 @@ export default function VideoMeetComponent() {
   let [newMessages, setNewMessages] = useState(3);
   let [askForUsername, setAskForUsername] = useState(true);
   let [username, setUsername] = useState("");
+  const [chatOpen, setChatOpen] = useState(true);
 
   const videoRef = useRef([]);
 
@@ -564,7 +565,9 @@ export default function VideoMeetComponent() {
           </div>
         </div>
       ) : (
-        <div className="meetVideoContainer">
+        <div
+          className={`meetVideoContainer ${showModal ? "chat-open" : "chat-closed"}`}
+        >
           {showModal ? (
             <div className="chatRoom">
               <div className="chatContainer">

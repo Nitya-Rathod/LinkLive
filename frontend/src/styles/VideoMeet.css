@@ -17,7 +17,7 @@
 
 .buttonContainers {
   position: absolute;
-  left: calc(50% - 190px);
+  left: 50%;
   bottom: 24px;
   transform: translateX(-50%);
   display: flex;
@@ -45,7 +45,7 @@
   font-size: 1.4rem;
 }
 
-.conferenceView {
+/* .conferenceView {
   display: flex;
   padding: 10px;
   gap: 5px;
@@ -53,9 +53,29 @@
   width: 75vw;
   align-items: center;
   justify-content: center;
+} */
+
+.conferenceView {
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+  height: 80vh;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease;
 }
 
-.conferenceView video {
+.chat-open .conferenceView {
+  width: calc(100% - 460px);
+}
+
+.chat-closed .conferenceView {
+  width: 100%;
+}
+
+/* .conferenceView video {
   width: 50vw !important;
   height: 65vh !important;
   min-width: 300px;
@@ -63,6 +83,17 @@
   border-radius: 10px;
   background: #14183a;
   border: 1px solid #262b52;
+} */
+
+.conferenceView video {
+  width: 100% !important;
+  height: 65vh !important;
+  min-width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #14183a;
+  border: 1px solid #262b52;
+  transition: width 0.3s ease;
 }
 
 .chatRoom {

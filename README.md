@@ -2,7 +2,31 @@
 
 A Zoom-inspired video conferencing web app built with the MERN stack, WebRTC, and Socket.io — supporting real-time video/audio calls, in-call chat, and meeting history.
 
-## Features
+## 📸 Screenshots
+
+## Screenshots
+
+### Landing Page
+
+![Landing Page](./screenshots/landing.png)
+
+### Authentication
+
+![Auth Page](./screenshots/auth.png)
+
+### Home
+
+![Home Page](./screenshots/home.png)
+
+### In-Call Screen
+
+![In-Call Screen](./screenshots/in-call.png)
+
+### Meeting History
+
+![History Page](./screenshots/history.png)
+
+## ✨ Features
 
 - **User authentication** — sign up and log in with username/password
 - **Instant meetings** — create or join a meeting using a unique meeting code
@@ -12,9 +36,10 @@ A Zoom-inspired video conferencing web app built with the MERN stack, WebRTC, an
 - **Meeting history** — automatically logs meetings you've joined, with the ability to delete individual entries
 - **Responsive UI** — fully responsive dark-themed interface, usable on both desktop and mobile
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 **Frontend**
+
 - React
 - Material UI (MUI)
 - React Router
@@ -22,13 +47,14 @@ A Zoom-inspired video conferencing web app built with the MERN stack, WebRTC, an
 - Axios
 
 **Backend**
+
 - Node.js
 - Express
 - MongoDB with Mongoose
 - Socket.io
 - WebRTC (RTCPeerConnection) for peer-to-peer media streaming
 
-## Getting Started
+## ⚙️ Getting Started
 
 ### Prerequisites
 
