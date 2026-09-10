@@ -582,7 +582,7 @@ export default function VideoMeetComponent() {
                       );
                     })
                   ) : (
-                    <p className={chattingDisplayEmpty}>No Messages Yet</p>
+                    <p className="chattingDisplayEmpty">No Messages Yet</p>
                   )}
                 </div>
 
