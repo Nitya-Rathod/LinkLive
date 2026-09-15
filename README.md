@@ -20,7 +20,7 @@ A Zoom-inspired video conferencing web app built with the MERN stack, WebRTC, an
 
 ### In-Call Screen
 
-![In-Call Screen](./screenshots/CallScreen.png)
+![In-call](./screenshots/CallScreen.png)
 
 ### Meeting History Page
 

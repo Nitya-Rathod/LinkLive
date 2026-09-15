@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import withAuth from "../utils/withAuth";
+import withAuth from "../utils/WithAuth";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 
