@@ -2,7 +2,7 @@
 
 A Zoom-inspired video conferencing web app built with the MERN stack, WebRTC, and Socket.io — supporting real-time video/audio calls, in-call chat, and meeting history.
 
-🔗 **Live Demo:** [https://link-live-cv7e-vert.vercel.app](https://link-live-cv7e-vert.vercel.app)
+🔗 **Live Demo:** https://link-live-cv7e-vert.vercel.app
 
 ## 📸 Screenshots
 
